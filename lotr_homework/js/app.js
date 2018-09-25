@@ -75,7 +75,7 @@ const makeHobbits = () => {
   // 2. give each hobbit a class of "hobbit"
   $('#The-Shire').append('<ul>');
   for(i=0;i<hobbits.length;i++){
-    $('#The-Shire').append(`<li>${hobbits[i]}</li>`);
+    $('#The-Shire').append(`<li class="hobbit">${hobbits[i]}</li>`);
   }
   $('#The-Shire').append('</ul>');
   // hint: create a 'ul' outside the loop upon which to append the 'li's
@@ -95,7 +95,13 @@ const keepItSecretKeepItSafe = () => {
   // 1. create an empty div with an id of 'the-ring'
 
   // 2. add the ring as a child of Frodo
-
+  let hobjects = $('#The-Shire').find('.hobbit');
+  console.log(hobjects);
+  for(i=0; i < hobjects.length;i++){
+    if(hobjects[i].innerHTML == "Frodo Baggins"){
+      $(hobjects[i]).append('<div id="the-ring">The Ring</div>');
+    }
+  }
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
   // when you think you have given Frodo the ring, check in your Elements tab
