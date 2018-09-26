@@ -178,7 +178,7 @@ const beautifulStranger = () => {
   // 1. change the buddy 'Strider' textnode to "Aragorn"
 
   // hint: You can get a list of elements by tag name, such as 'aside'
-$('#middle-earth .buddy:contains("Strider")').html('<li class="buddy">Aragorn</li>');
+$('#middle-earth .buddy:contains("Strider")').html('Aragorn');
 
 };
 
@@ -197,7 +197,11 @@ const forgeTheFellowShip = () => {
   // 3. append the fellowship to middle-earth
 
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
-
+  $('#middle-earth').append('<div id="the-fellowship"><ul></ul></div>');
+  $('#the-fellowship ul').append($('.buddy'));
+  $('#the-fellowship ul').append($('.hobbit'));
+  $('#Rivendell ul').remove();
+  $('#middle-earth aside').remove();
 };
 
 // COMMIT YOUR WORK
