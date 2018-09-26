@@ -73,11 +73,12 @@ const makeHobbits = () => {
   // 1. display an unordered list of the hobbits in the shire.
 
   // 2. give each hobbit a class of "hobbit"
-  $('#The-Shire').append('<ul>');
+  hobbitses = '<ul>';
   for(i=0;i<hobbits.length;i++){
-    $('#The-Shire').append(`<li class="hobbit">${hobbits[i]}</li>`);
+    hobbitses += `<li class="hobbit">${hobbits[i]}</li>`;
   }
-  $('#The-Shire').append('</ul>');
+  hobbitses += '</ul>'
+  $('#The-Shire').append(hobbitses);
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
@@ -96,7 +97,6 @@ const keepItSecretKeepItSafe = () => {
 
   // 2. add the ring as a child of Frodo
   let hobjects = $('#The-Shire').find('.hobbit');
-  console.log(hobjects);
   for(i=0; i < hobjects.length;i++){
     if(hobjects[i].innerHTML == "Frodo Baggins"){
       $(hobjects[i]).append('<div id="the-ring">The Ring</div>');
@@ -145,7 +145,7 @@ const makeBuddies = () => {
   // 3. give each of the buddies a class of "buddy"
   let buddy = "<ul>"
   for (i=0; i<buddies.length; i++){
-    buddy += `<li>${buddies[i]}</li>`;
+    buddy += `<li class="buddy">${buddies[i]}</li>`;
   }
   $('#middle-earth').append(`<aside>${buddy}</ul></aside>`)
 };
@@ -161,7 +161,10 @@ const leaveTheShire = () => {
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
-
+  console.log($('#The-Shire ul'));
+  let hobbitses = $('#The-Shire ul');
+  $('#Rivendell').append(hobbitses);
+  $('The-Shire ul').remove()
 };
 
 // COMMIT YOUR WORK
