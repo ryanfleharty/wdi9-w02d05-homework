@@ -143,7 +143,11 @@ const makeBuddies = () => {
   // 2. display an unordered list of buddies in the aside
 
   // 3. give each of the buddies a class of "buddy"
-
+  let buddy = "<ul>"
+  for (i=0; i<buddies.length; i++){
+    buddy += `<li>${buddies[i]}</li>`;
+  }
+  $('#middle-earth').append(`<aside>${buddy}</ul></aside>`)
 };
 
 // COMMIT YOUR WORK
