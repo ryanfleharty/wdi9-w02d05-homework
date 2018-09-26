@@ -251,6 +251,8 @@ const itsDangerousToGoAlone = () => {
 
   // 2. add a div with an id of 'mount-doom' to Mordor
 
+  $('#Mordor').append($('#middle-earth .hobbit:contains("Frodo Baggins")'));
+  $('#Mordor').append($(`#middle-earth .hobbit:contains("Samwise 'Sam' Gamgee")`));
 };
 
 // COMMIT YOUR WORK
