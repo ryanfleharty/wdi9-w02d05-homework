@@ -209,7 +209,7 @@ const forgeTheFellowShip = () => {
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
 	$('#Rivendell').children('ul').detach().appendTo($fellers);
-	$('aside').children('ul').detach().appendTo($fellers);
+	$('aside').detach().appendTo($fellers);
 
 };
 
@@ -223,7 +223,11 @@ const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
 
+	$('aside .buddy:contains("Gandalf the Grey")').text('Gandalf the White');
+
   // 2. add a class "the-white" to this element
+	
+	$('aside .buddy:contains("Gandalf the White")').attr('class', 'the-white');
 
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
