@@ -234,7 +234,9 @@ const hornOfGondor = () => {
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-
+  alert("The horn of Gondor has been blown!");
+  $('#middle-earth .buddy:contains("Boromir")').html("<s>Boromir</s>");
+  $('#Mordor li:contains("The Uruk-hai")').remove();
 };
 
 // COMMIT YOUR WORK
