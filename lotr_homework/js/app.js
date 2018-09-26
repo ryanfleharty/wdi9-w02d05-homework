@@ -183,6 +183,7 @@ const beautifulStranger = () => {
 
   // hint: You can get a list of elements by tag name, such as 'aside'
 
+	$('aside .buddy:contains("Strider")').text('Aragorn');
 };
 
 // COMMIT YOUR WORK
