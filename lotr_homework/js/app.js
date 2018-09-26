@@ -254,7 +254,7 @@ const itsDangerousToGoAlone = () => {
   $('#Mordor').append($('#middle-earth .hobbit:contains("Frodo Baggins")'));
   $('#Mordor').append($(`#middle-earth .hobbit:contains("Samwise 'Sam' Gamgee")`));
 };
-
+  $('#Mordor').append('<div id="mount-doom">Mount Doom</div>')
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
 
@@ -268,7 +268,9 @@ const weWantsIt = () => {
   // 2. Move the ring from Frodo and give it to Gollum
 
   // 3. Move Gollum into Mount Doom
-
+  $('#Mordor').append("<div id='gollum'>Gollum</div)");
+  $('#the-ring').append("#gollum");
+  $('#gollum').append("#mount-doom");
 };
 
 // COMMIT YOUR WORK
