@@ -116,7 +116,7 @@ const keepItSecretKeepItSafe = () => {
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
 
-// ============
+// =====:=======
 // Chapter 4
 // ============
 const makeBaddies = () => {
@@ -168,7 +168,7 @@ const leaveTheShire = () => {
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
-	$('#' + lands[0]).children().detach().appendTo('#' + lands[1]);
+	$('#' + lands[0]).children('ul').detach().appendTo('#' + lands[1]);
 };
 
 // COMMIT YOUR WORK
@@ -196,11 +196,20 @@ const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
 
+  	const $fellers = $('<div id ="the-fellowship"></div>');
+	
   // 2. add an h1 with the text 'The Fellowship' to this new div
+	
+	$fellers.html('<h1>The FellowShip</h1>');
 
   // 3. append the fellowship to middle-earth
+	
+	$('#middle-earth').append($fellers);
 
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+
+	$('#Rivendell').children('ul').detach().appendTo($fellers);
+	$('aside').children('ul').detach().appendTo($fellers);
 
 };
 
